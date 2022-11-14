@@ -2,6 +2,8 @@ import express from 'express';
 import { engine } from 'express-handlebars';
 import routes from './routes/index.js';
 import mongoose from 'mongoose';
+import cors from 'cors';
+
 import * as dotenv from 'dotenv'
 dotenv.config()
 
@@ -10,6 +12,7 @@ const port = process.env.PORT
 
 app.use(express.static('src/public'))
 app.use(express.json())
+app.use(cors())
 
 app.engine('.hbs', engine({ extname: '.hbs' }));
 app.set('view engine', '.hbs');
