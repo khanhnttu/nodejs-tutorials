@@ -1,10 +1,10 @@
 import express from "express";
-import { 
-    createUserController, 
-    detailsUserController, 
-    loginUserController, 
-    userController, 
-    searchUserController ,
+import {
+    createUserController,
+    detailsUserController,
+    loginUserController,
+    userController,
+    searchUserController,
     updateUserController,
     deleteUserController,
     getAllUserController,
@@ -17,19 +17,19 @@ const router = express.Router()
 
 router.get('/search', searchUserController)
 
-router.get('/getAll' , authMiddleware, getAllUserController)
+router.get('/getAll', getAllUserController)
 
 router.put('/update/:id', updateUserController)
 
-router.delete('/delete/:id' , deleteUserController)
+router.delete('/delete/:id', deleteUserController)
 
-router.delete('/deleteMany' , deleteAllUserController)
+router.delete('/deleteMany', deleteAllUserController)
 
 router.get('/:userId', detailsUserController)
 
-router.post('/login' , loginUserController)
+router.post('/login', loginUserController)
 
-router.post('/' , createUserController)
+router.post('/', createUserController)
 
 router.get('/', userController)
 
