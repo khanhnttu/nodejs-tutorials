@@ -1,0 +1,1 @@
+web: nodemon node src/index.js
