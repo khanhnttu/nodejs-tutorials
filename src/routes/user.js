@@ -17,7 +17,7 @@ const router = express.Router()
 
 router.get('/search', searchUserController)
 
-router.get('/getAll', getAllUserController)
+router.get('/getAll', authMiddleware, getAllUserController)
 
 router.put('/update/:id', updateUserController)
 
