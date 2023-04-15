@@ -1,7 +1,6 @@
 import { sendEmailService } from "../services/EmailService.js"
 
 
-
 export const sendEmailController = async (req, res) => {
   try{
       const { email } = req.body
